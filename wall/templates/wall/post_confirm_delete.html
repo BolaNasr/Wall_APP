@@ -1,0 +1,18 @@
+{% extends "user/index.html" %}
+{% block content %}
+
+<div class="content-section col-md-8 col-md-offset-2">
+    <form method="POST" style="border: 1px solid black; margin: 4%; padding:10%; border-radius:1%;">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <center>
+                Are you sure you want to delete "{{ object }}" ?<br />
+            </center>
+        </fieldset>
+        <center>
+            <input class="btn btn-primary" type="submit" value="Delete" />
+        </center>
+        <br />
+    </form>
+</div>
+{% endblock %}
